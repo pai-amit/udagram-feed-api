@@ -17,6 +17,11 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
   const port = 8080;
 
   app.use(bodyParser.json());
+  
+  var origin = req.get('origin');
+  var host = req.get('host');
+  console.log( `The origin is : ${origin}` );
+  console.log( `The host is : ${host}` );
 
   app.use(cors({
     allowedHeaders: [
